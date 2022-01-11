@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/tvFeedback"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Weather Forecast"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFeedback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvFeedback"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Pick a City:"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/aveiro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/aveiro"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Aveiro"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/viseu"
+        app:layout_constraintStart_toStartOf="@+id/tvFeedback"
+        app:layout_constraintBottom_toTopOf="@+id/lisboa"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/viseu"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Viseu"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/porto"
+        app:layout_constraintEnd_toEndOf="@+id/tvFeedback"
+        app:layout_constraintStart_toEndOf="@+id/aveiro"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/lisboa"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Lisboa"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/porto"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/tvFeedback"
+        app:layout_constraintTop_toBottomOf="@+id/aveiro" />
+
+    <Button
+        android:id="@+id/porto"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Porto"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toEndOf="@+id/lisboa"
+        app:layout_constraintEnd_toEndOf="@+id/tvFeedback"
+        app:layout_constraintTop_toBottomOf="@+id/viseu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
